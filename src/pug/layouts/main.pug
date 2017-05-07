@@ -1,0 +1,16 @@
+block variables
+doctype html
+html(lang='ru')
+  head: include ../partials/head.pug
+  body
+    unless debug === false
+      include ../partials/debug.pug
+    div.all
+      div.all__header
+        block header
+      div.all__body
+        block body
+      div.all__footer
+        block footer
+    include ../partials/popups.pug
+    include ../partials/scripts.pug

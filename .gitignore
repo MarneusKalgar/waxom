@@ -1,0 +1,28 @@
+# Ignore runtime files
+/protected/runtime/*
+/public/assets/*
+
+# Ignore local configuration files
+/protected/env.php
+/protected/config/local.php
+
+# Ignore Mac OS X thumb files
+.DS_Store
+
+# Do not ignore any .keep file
+!.keep
+
+# PhpStorm files
+.idea
+
+# uploads
+/public/uploads
+/public/uploads/*
+!/public/uploads/redactor/
+/public/uploads/redactor/*
+
+# ignore node_modules, they are specific to platform and not needed on stage and prod
+node_modules
+
+# ignore temp
+.tmp

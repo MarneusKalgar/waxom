@@ -1,0 +1,19 @@
+{
+  "name": "markup",
+  "version": "2.0.0",
+  "authors": [
+    "Ebola Communications font-end devs"
+  ],
+  "license": "UNLICENSED",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components"
+  ],
+  "dependencies": {
+    "normalize.css": "*",
+    "jquery": "3.*",
+    "mdi": "^1.7.22"
+  }
+}

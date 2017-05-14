@@ -1,0 +1,56 @@
+mixin carousel
+	.carousel.slide#carousel(data-ride="carousel")
+		<!-- Indicators -->
+		ol.carousel-indicators
+			li(data-target="#carousel" data-slide-to="0", class="active")
+			li(data-target="#carousel" data-slide-to="1")
+			li(data-target="#carousel" data-slide-to="2")
+			li(data-target="#carousel" data-slide-to="3")
+			li(data-target="#carousel" data-slide-to="4")
+
+		<!-- Wrapper for slides -->
+		.carousel-inner(role="listbox")
+			.item.active
+				img(src="img/header/bg-photo.jpg",alt="...")
+				.carousel-caption
+					h3 Unique and Modern Design
+					h1 Portfolio PSD Template
+					p Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum.
+					a.button.button_colored(href="#") get started
+			.item
+				img.img-responsive(src="img/header/bg-photo.jpg",alt="...")
+				.carousel-caption
+					h3 Unique and Modern Design
+					h1 Portfolio PSD Template
+					p Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum.
+					a.button.button_colored(href="#") get started
+			.item
+				img.img-responsive(src="img/header/bg-photo.jpg",alt="...")
+				.carousel-caption
+					h3 Unique and Modern Design
+					h1 Portfolio PSD Template
+					p Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum.
+					a.button.button_colored(href="#") get started
+			.item
+				img.img-responsive(src="img/header/bg-photo.jpg",alt="...")
+				.carousel-caption
+					h3 Unique and Modern Design
+					h1 Portfolio PSD Template
+					p Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum.
+					a.button.button_colored(href="#") get started
+			.item
+				img.img-responsive(src="img/header/bg-photo.jpg",alt="...")
+				.carousel-caption
+					h3 Unique and Modern Design
+					h1 Portfolio PSD Template
+					p Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum.
+					a.button.button_colored(href="#") get started
+
+
+		<!-- Controls -->
+		a.left.carousel-control(href="#carousel", role="button", data-slide="prev")
+			svg(width="20", height="30")
+				use(xlink:href="#arrow-left")
+		a.right.carousel-control(href="#carousel", role="button", data-slide="next")
+			svg(width="20", height="30")
+				use(xlink:href="#arrow-right")

@@ -1,0 +1,43 @@
+/*SERVICES*/
+.services {
+	padding: em(70px) 0;
+	text-align: center;
+
+	&__item {
+		position: relative;
+		padding: em(15px) 0 em(20px);
+		&::after {
+			content: "";
+			@include position(absolute, 100% null null 50%);
+			@include size(33.333% 3px);
+			transform: translateX(-50%);
+			background-color: #f1eee9;
+			transition: all .3s ease-in;
+		}
+		&:hover {
+			&::after {
+				background-color: $color-decor-primary;
+			}
+			.services__icon {
+				fill: $color-decor-primary;
+			}
+			.services__caption {
+				color: $color-decor-primary;
+			}
+		}
+	}
+
+	&__icon {
+		@include size(em(50px) em(50px));
+		fill: $color-text-dark;
+		transition: all .3s ease-in;
+	}
+
+	&__caption {
+		transition: all .3s ease-in;
+	}
+
+	&__desc {
+		margin: 0;
+	}
+}

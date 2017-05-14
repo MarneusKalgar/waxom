@@ -1,0 +1,17 @@
+mixin purchaseModal
+	.modal.fade#purchaseModal(tabindex="-1" role="dialog")
+		.modal-dialog(role="document")
+			.modal-content
+				.modal-header
+					button(type="button", class="close", data-dismiss="modal", aria-label="Close")
+						span(aria-hidden="true") &times;
+					h4.modal-title Modal title
+				.modal-body
+					form
+						.form-group
+							label(for="name") Name
+							input(type="email", class="form-control" id="name" placeholder="Name")
+						.form-group
+							label(for="email") Email
+							input(type="email", class="form-control" id="email" placeholder="Email")
+						button.button.button_colored(type="submit") Submit

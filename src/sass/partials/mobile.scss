@@ -1,0 +1,27 @@
+/*MOBILE*/
+.mobile {
+	padding-top: 7%;
+
+	&__content {
+		margin-top: 18%;
+	}
+
+	&__title {
+		margin-bottom: em(16px);
+	}
+
+	&__list {
+		margin: em(24px) 0 0;
+		list-style: none;
+	}
+
+	&__item {
+		position: relative;
+		svg {
+			@include position(absolute, .3em null null -1.5em);
+			@include size(em(14px) em(14px));
+			margin-right: 1em;
+			fill: $color-decor-primary;
+		}
+	}
+}

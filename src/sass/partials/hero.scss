@@ -1,0 +1,49 @@
+/*HERO*/
+.hero {
+
+	.carousel-caption {
+		bottom: 50%;
+		transform: translateY(50%);
+		@include minW($tablet-width) {
+			bottom: 50%;
+		}
+
+		h1 {
+			font-size: em(52px);
+			font-weight: 800;
+			font-family: $font-default-title;
+		}
+
+		h3 {
+			font-size: em(36px);
+			font-weight: 500;
+			font-family: $font-default-title;
+		}
+
+		p {
+			width: em(600px);
+			margin: 0 auto;
+		}
+
+		a.button {
+			margin-top: 2em;
+		}
+	}
+
+	.carousel-control {
+
+		svg {
+			@include position(absolute, 50% null null null);
+			@include size(rem(50px) rem(70px));
+			transform: translate(-50%, -50%);
+			fill: $color-text-light;
+		}
+
+		&.left {
+			svg {  left: 50%;  }
+		}
+		&.right {
+			svg {  left: 50%;  }
+		}
+	}
+}

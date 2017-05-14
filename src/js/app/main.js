@@ -1,9 +1,12 @@
 jQuery(function($) {
-  $(document).on('change', '.button_file :file', function() {
-    let input = $(this);
-    let numFiles = input.get(0).files ? input.get(0).files.length : 1;
-    let label = input.val().replace(/\\/g, '/').replace(/.*\//, '');
-
-    input.trigger('fileselect', [numFiles, label]);
+  var $header = $(".header");
+  var scrollTop;
+  $(window).on('scroll', function() {
+    scrollTop = $(window).scrollTop();
+    if (scrollTop > 0) {
+      $header.addClass("header_isScrolled");
+    } else {
+      $header.removeClass("header_isScrolled");
+    }
   });
 });

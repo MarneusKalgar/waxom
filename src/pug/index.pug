@@ -3,16 +3,28 @@ extends layouts/main.pug
 //- Don't forget that you can use block/append/prepend on blocks
 //- Pass your variables through this block.
 block variables
-//-
-  - let title = 'index';
-  - let debug = true;
+
+	- let title = 'index';
+	- let debug = false;
 
 //- Debug links. Add some.
 append debug_links
-  //- a(href='http://google.com') google, for example
+	//- a(href='http://google.com') google, for example
 
 block header
+	include partials/header.pug
 block body
+	include partials/main.pug
 block footer
 
 //- Use block/append/prepend 'scripts' to override/add scripts
+block append scripts
+	script.
+		$(function() {
+			$('.carousel').carousel({
+				interval: false
+			});
+			$('#purchaseModal').modal({
+				show: false
+			});
+		});

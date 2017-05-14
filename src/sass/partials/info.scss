@@ -1,0 +1,36 @@
+/*INFO*/
+.info {
+	padding: em(60px) 0;
+	background-image: linear-gradient(to right, $color-gradient0 0%, $color-gradient100 100%);
+
+	&__item {
+		position: relative;
+		padding: em(15px) 0 em(20px);
+		text-align: center;
+		&::after {
+			content: "";
+			@include position(absolute, 100% null null 50%);
+			@include size(25% 2px);
+			transform: translateX(-50%);
+			background-color: #f1eee9;
+			transition: all .3s ease-in;
+		}
+
+		svg {
+			@include size(em(60px) em(45px));
+			fill: $color-decor-primary;
+		}
+	}
+
+	&__caption {
+		font-size: $font-size-default * 3;
+		color: $color-text-light;
+		font-weight: 300;
+	}
+
+	&__text {
+		font-size: $font-size-default * .875;
+		text-transform: uppercase;
+		color: $color-decor-primary;
+	}
+}

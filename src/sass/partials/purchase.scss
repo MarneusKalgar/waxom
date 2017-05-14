@@ -1,0 +1,18 @@
+/*PURCHASE*/
+.purchase {
+	padding: em(50px) 0;
+	background-image: linear-gradient(to right, $color-gradient0 0%, $color-gradient100 100%);
+
+	&__title {
+		margin-top: 0;
+		color: $color-text-light;
+		
+		span {
+			color: $color-decor-primary;
+		}
+	}
+
+	&__desc {
+		margin-bottom: 0;
+	}
+}

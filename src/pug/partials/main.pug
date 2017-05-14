@@ -1,0 +1,226 @@
+main.main
+	section.hero
+		.container-fluid.p0
+			+carousel()
+	section.services
+		.container
+			.row
+				.col-xs-12.col-sm-6.col-md-3
+					.services__item.services__item_design
+						svg.services__icon(width="24", height="24")
+							use(xlink:href="#pencil")
+						h3.section-caption.services__caption Web & App Design
+						p.services__desc Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim.
+				.col-xs-12.col-sm-6.col-md-3
+					.services__item.services__item_dev
+						svg.services__icon(width="24", height="24")
+							use(xlink:href="#stack")
+						h3.section-caption.services__caption Web & App Design
+						p.services__desc Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim.
+				.col-xs-12.col-sm-6.col-md-3
+					.services__item.services__item_custom
+						svg.services__icon(width="24", height="24")
+							use(xlink:href="#gear")
+						h3.section-caption.services__caption Web & App Design
+						p.services__desc Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim.
+				.col-xs-12.col-sm-6.col-md-3
+					.services__item.services__item_market
+						svg.services__icon(width="24", height="24")
+							use(xlink:href="#case")
+						h3.section-caption.services__caption Web & App Design
+						p.services__desc Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim.
+	section.ideas
+		.container
+			.row
+				.col-md-8.col-md-offset-2
+					h2.section-title.ideas__title Waxom is Realization of your Ideas.
+					p.ideas__desc Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium.
+				.col-xs-12.p0
+					.ideas__imgs
+						.ideas__img-wrap.ideas__img-wrap_left
+							img.img-responsive(src="img/ideas/browser-left.jpg", alt="browser")
+						.ideas__img-wrap.ideas__img-wrap_center
+							img.img-responsive(src="img/ideas/browser-center.jpg", alt="browser")
+						.ideas__img-wrap.ideas__img-wrap_right
+							img.img-responsive(src="img/ideas/browser-right.jpg", alt="browser")
+	section.purchase
+		.container
+			.row
+				.col-md-7
+					.purchase__content
+						h2.section-title.purchase__title
+							span Waxom
+							|  Multipurpose WordPress Theme
+						p.purchase__desc Don't Forget to Rate the Template. Thanks so much!
+				.col-md-2.col-md-offset-3
+					button.button.button_colored(type="button", data-toggle="modal", data-target="#purchaseModal") purchase now
+
+	section.projects
+		.container
+			.row
+				.col-md-8.col-md-offset-2
+					.projects__content
+						h2.section-title.projects__title Our Latest Projects
+						p.purchase__desc Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium.
+						ul.projects__pills
+							li.projects__pills-item.projects__pills-item_isActive(role="presentation"): button(type="button") All
+							li.projects__pills-item(role="presentation"): button(type="button") Web Design
+							li.projects__pills-item(role="presentation"): button(type="button") Mobile App
+							li.projects__pills-item(role="presentation"): button(type="button") Illustration
+							li.projects__pills-item(role="presentation"): button(type="button") Photography
+			.row
+				.col-sm-6.col-md-4
+					.projects__item
+						header.projects__header
+							a.projects__link(href="#")
+								svg(width="16", height="16")
+									use(xlink:href="#link")
+							a.projects__link(href="#")
+								svg(width="16", height="16")
+									use(xlink:href="#search")
+							img.img-responsive(src="img/projects/projects-img1.jpg", alt="project")
+						.projects__body
+							h4 Claritas Etiam Processus
+							p Photography, Nature
+				.col-sm-6.col-md-4
+					.projects__item
+						header.projects__header
+							a.projects__link(href="#")
+								svg(width="16", height="16")
+									use(xlink:href="#link")
+							a.projects__link(href="#")
+								svg(width="16", height="16")
+									use(xlink:href="#search")
+							img.img-responsive(src="img/projects/projects-img2.jpg", alt="project")
+						.projects__body
+							h4 Claritas Etiam Processus
+							p Photography, Nature
+				.col-sm-6.col-md-4
+					.projects__item
+						header.projects__header
+							a.projects__link(href="#")
+								svg(width="16", height="16")
+									use(xlink:href="#link")
+							a.projects__link(href="#")
+								svg(width="16", height="16")
+									use(xlink:href="#search")
+							img.img-responsive(src="img/projects/projects-img3.jpg", alt="project")
+						.projects__body
+							h4 Claritas Etiam Processus
+							p Photography, Nature
+				.col-sm-6.col-md-4
+					.projects__item
+						header.projects__header
+							a.projects__link(href="#")
+								svg(width="16", height="16")
+									use(xlink:href="#link")
+							a.projects__link(href="#")
+								svg(width="16", height="16")
+									use(xlink:href="#search")
+							img.img-responsive(src="img/projects/projects-img4.jpg", alt="project")
+						.projects__body
+							h4 Claritas Etiam Processus
+							p Photography, Nature
+				.col-sm-6.col-md-4
+					.projects__item
+						header.projects__header
+							a.projects__link(href="#")
+								svg(width="16", height="16")
+									use(xlink:href="#link")
+							a.projects__link(href="#")
+								svg(width="16", height="16")
+									use(xlink:href="#search")
+							img.img-responsive(src="img/projects/projects-img5.jpg", alt="project")
+						.projects__body
+							h4 Claritas Etiam Processus
+							p Photography, Nature
+				.col-sm-6.col-md-4
+					.projects__item
+						header.projects__header
+							a.projects__link(href="#")
+								svg(width="16", height="16")
+									use(xlink:href="#link")
+							a.projects__link(href="#")
+								svg(width="16", height="16")
+									use(xlink:href="#search")
+							img.img-responsive(src="img/projects/projects-img6.jpg", alt="project")
+						.projects__body
+							h4 Claritas Etiam Processus
+							p Photography, Nature
+			.row
+				button.button.button_colored.projects__btn(type="button") load more
+
+	section.presentation
+		.container-fluid.p0
+			.presentation__content
+				.container
+					.row
+						.col-md-6.col-md-offset-3
+							button.button.presentation__btn(type="button")
+								svg(xmlns="http://www.w3.org/2000/svg", width="16", height="16")
+									use(xlink:href="#play")
+							h2.section-title.presentation__title Waxom Video Presentation
+							p.desc Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius, qui sequitur mutationem consuetudium.
+			.presentation__video(data-embed="F4KqFh0tUqo")
+
+	section.mobile
+		.container
+			.row
+				.col-md-5
+					img(src="img/mobile/phone.png")
+				.col-md-7
+					.mobile__content
+						h2.section-title.mobile__title Excellent for Mobile Devices
+						p Qisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius claritas. Eodem modo typi, qui nunc nobis videntur parum clari, fiant sollemnes in futurum.
+						ul.mobile__list
+							li.mobile__item
+								svg(width="10", height="10")
+									use(xlink:href="#play-arrow")
+								| Nam liber tempor cum soluta nobis eleifend option;
+							li.mobile__item
+								svg(width="10", height="10")
+									use(xlink:href="#play-arrow")
+								| Option congue nihil imperdiet doming id quod mazim placerat facer;
+							li.mobile__item
+								svg(width="10", height="10")
+									use(xlink:href="#play-arrow")
+								| Eodem modo typi, qui nunc nobis videntur parum futurum;
+							li.mobile__item
+								svg(width="10", height="10")
+									use(xlink:href="#play-arrow")
+								| Investigationes demonstraverunt lectores
+
+	section.info
+		.container
+			.row
+				.col-md-2.col-md-offset-1
+					.info__item
+						svg(width="24", height="24")
+							use(xlink:href="#people")
+						h3.info__caption 3587
+						p.info__text Satisfied Clients
+				.col-md-2
+					.info__item
+						svg(width="24", height="24")
+							use(xlink:href="#coffee")
+						h3.info__caption 207
+						p.info__text cups of coffee
+				.col-md-2
+					.info__item
+						svg(width="24", height="24")
+							use(xlink:href="#post")
+						h3.info__caption 2500
+						p.info__text blog posts
+				.col-md-2
+					.info__item
+						svg(width="24", height="24")
+							use(xlink:href="#like")
+						h3.info__caption 873
+						p.info__text likes
+				.col-md-2
+					.info__item
+						svg(width="24", height="24")
+							use(xlink:href="#launch")
+						h3.info__caption 900
+						p.info__text we launched
+

@@ -1,0 +1,46 @@
+/*PRESENTATION*/
+.presentation {
+	position: relative;
+	z-index: 100;
+	padding: 13% 0;
+	color: $color-text-light;
+	text-align: center;
+	&::after {
+		content: "";
+		@include position(absolute, 0 null null 0);
+		z-index: -1;
+		@include size(100% 100%);
+		background-color: rgba(#111, .5);
+	}
+	
+	&__title {
+		color: $color-text-light;
+	}
+
+	&__video {
+		@include position(absolute, 0 null null 0);
+		z-index: -1;
+		@include size(100% 100%);
+		background: url("../img/presentation/video-pl.jpg") center no-repeat;
+		background-size: cover;
+	}
+
+	&__btn {
+		position: relative;
+		@include size(em(80px) em(80px));
+		min-width: em(60px);
+		padding: 0;
+		background-color: rgba(#111, .6);
+		border-radius: 50%;
+		&:hover {
+			background-color: rgba(#111, .4);
+		}
+
+		svg {
+			@include position(absolute, 50% null null 50%);
+			@include size(75% 75%);
+			transform: translate(-50%, -50%);
+			fill: $color-text-light;
+		}
+	}
+}

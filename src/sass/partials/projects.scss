@@ -1,0 +1,128 @@
+/*PROJECTS*/
+.projects {
+	padding: em(70px) 0;
+	text-align: center;
+
+	&__pills {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin:	5% auto 0;
+		padding: 0;
+		list-style: none;
+	}
+
+	&__pills-item {
+		padding: 0 em(10px);
+
+		button {
+			padding: em(10px) em(20px);
+			color: $color-text-default;
+			background-color: rgba(0,0,0,0);
+			border: 1px solid $color-text-default;
+			border-radius: 5px;
+			transition: all .3s ease;
+			outline: none;
+		}
+
+		&_isActive,
+		&:hover {
+			button {
+				color: $color-text-light;
+				background-color: $color-decor-primary;
+				border-color: $color-decor-primary;
+			}
+		}
+	}
+
+
+	&__item {
+		margin-top: em(30px);
+		transition: all .3s ease;
+		&:hover {
+			.projects__header {
+				&::after {  opacity: 1;  }
+				a {  opacity: 1;  }
+			}
+			.projects__body {
+				background-color: #362f2d;
+				&::before {  border-bottom-color: #362f2d;  }
+				h4 {  color: $color-text-light;  }
+				p {  color: $color-decor-primary;  }
+			}
+		}
+	}
+
+	&__header {
+		position: relative;
+		&::after {
+			content: "";
+			@include position(absolute, 0 null null 0);
+			@include size(100% 100%);
+			background-color: rgba(0,0,0,.5);
+			opacity: 0;
+			transition: all .3s ease;
+		}
+
+		a {
+			@include position(absolute, 50% null null null);
+			z-index: 200;
+			transform: translateY(-50%);
+			opacity: 0;
+			transition: all .3s ease;
+			&:hover {
+				svg {
+					fill: $color-decor-primary;
+				}
+			}
+			&:first-of-type {
+				left: 35%;
+			}
+			&:last-of-type {
+				right: 35%;
+			}
+		}
+
+		svg {
+			@include size(em(26px) em(26px));
+			fill: $color-text-light;
+			transition: all .3s ease;
+		}
+	}
+
+	&__body {
+		position: relative;
+		padding: em(30px);
+		text-align: left;
+		background-color: $color-decor-light;
+		transition: all .3s ease;
+		&::before {
+			content: "";
+			@include position(absolute, null null 100% em(16px));
+			width: 0;
+			height: 0;
+			border-left: em(12px) solid transparent;
+			border-right: em(12px) solid transparent;
+			border-bottom: em(13px) solid $color-decor-light;
+			transition: all .3s ease;
+		}
+
+		h4 {
+			margin: 0;
+			font-size: $font-size-default * 1.25;
+			font-family: $font-default-title;
+			color: $color-decor-primary;
+			transition: all .3s ease;
+		}
+
+		p {
+			margin: em(16px) 0 0 0;
+			font-size: $font-size-default * .875;
+			transition: all .3s ease;
+		}
+	}
+
+	&__btn {
+		margin-top: em(30px);
+	}
+}

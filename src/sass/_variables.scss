@@ -1,6 +1,13 @@
-$color-text: #000;
-$color-note: #8d949f;
-$bg-button: #007cc2;
+$color-text-default: #8c8c8c;
+$color-text-light: #fff;
+$color-text-dark : #555;
+$color-decor-primary: #c7b299;
+$color-decor-light: #fbfaf8;
+
+$color-gradient0 : #211b19;
+$color-gradient100 : #4e3427;
+
+$bg-button: #998675;
 
 $thin: 100;
 $extra-light: 200;
@@ -12,12 +19,18 @@ $bold: 700;
 $extra-bold: 800;
 $black: 900;
 
-$font-default: Arial,Helvetica,FreeSans,"Liberation Sans","Nimbus Sans L",sans-serif;
+$font-default: 'Montserrat', Arial, Helvetica, sans-serif;
+$font-default-title: 'Raleway', Arial, Helvetica, sans-serif;
+$font-size-default: 1rem;
 
 // Media
 $phone-width: 320px;
 $tablet-width: 768px;
 $desktop-width: 1025px;
+
+$bootstrap-xs: 768px;
+$bootstrap-md: 992px;
+$bootstrap-lg: 1200px;
 
 // Bourbon
 $em-base: 16px; // Sets global base em size for the px-to-em and px-to-rem function. This should be the same size as your body font-size. Setting default is 16px.

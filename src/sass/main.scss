@@ -1,22 +1,25 @@
+@import "fonts";
 @import "variables";
 @import "bourbon/bourbon";
-@import "fonts";
 @import "helpers";
 
 * { outline: none; }
 
-html {
-  background: #fff;
-  font-family: $font-default;
-  font-size: $em-base;
-  line-height: 1.123;
-  color: $color-text;
-  cursor: default;
+html, body {
+	height: 100%;
+	min-height: 100%;
+	background: #fff;
+	font-family: $font-default;
+	font-size: $font-size-default;
+	line-height: 1.5;
+	color: $color-text-default;
+	cursor: default;
 }
 
-html, body {
-  height: 100%;
-  min-height: 100%;
+body {
+	max-width: 1920px;
+	min-width: 305px;
+	margin: 0 auto;
 }
 
 :root {
@@ -61,42 +64,42 @@ p { margin: 0 0 1em 0; }
   // &-note      { font-style: italic; color: $color-note; }
 }
 
-a.more::after {
-  @include mdi;
-  content: mdi("arrow-right");
-  display: inline;
-  font-size: inherit;
-  font-weight: inherit;
-  color: inherit;
-}
+//a.more::after {
+//  @include mdi;
+//  content: mdi("arrow-right");
+//  display: inline;
+//  font-size: inherit;
+//  font-weight: inherit;
+//  color: inherit;
+//}
 
-#debug {
-  @include opacity(0.8);
-  display: block;
-  position: fixed;
-  background: #e8514a;
-  right: 10px; bottom: 0;
-  padding: 5px 10px;
-  z-index: 200;
-  font-size: 12px; line-height: 1.5;
-  transform: translate(100%,0%);
-  transition: transform 0.2s, right 0.2s;
+//#debug {
+//  @include opacity(0.8);
+//  display: block;
+//  position: fixed;
+//  background: #e8514a;
+//  right: 10px; bottom: 0;
+//  padding: 5px 10px;
+//  z-index: 200;
+//  font-size: 12px; line-height: 1.5;
+//  transform: translate(100%,0%);
+//  transition: transform 0.2s, right 0.2s;
+//
+//  a { display: block; }
+//  &:hover { right: 0px; transform: translate(0%,0%); }
+//}
 
-  a { display: block; }
-  &:hover { right: 0px; transform: translate(0%,0%); }
-}
-
-button, .button {
-  $font-size: $em-base;
+.button {
+  $font-size: em(14px);
   @include no-selection;
-  box-sizing: border-box; border-radius: em(20px, $font-size);
+  box-sizing: border-box; border-radius: em(5px);
   display: inline-block; position: relative;
   border: none; border-collapse: collapse;
-  height: em(40px, $font-size); padding: 0 em(18px, $font-size);
-  font-family: $font-default;
-  line-height: em(40px, $font-size); font-size: rem($font-size);
-  font-weight: $medium;
-  text-align: center; vertical-align: middle; text-decoration: none !important;
+  min-width: rem(170px); height: auto; padding: em(18px) em(24px);
+  font-family: $font-default-title;
+  line-height: 1; font-size: $font-size;
+  font-weight: $bold;
+  text-align: center; vertical-align: middle; text-decoration: none !important;  text-transform: uppercase;
 
   &::-moz-focus-inner {border: none;}
   &:hover { cursor: pointer; }
@@ -113,7 +116,20 @@ button, .button {
       &.button_disabled, &:disabled, &[disabled] { background-color: transparent; color: shade(#fff, 30%); }
     }
     &_colored {
-      background-color: $bg-button; color: #fff;
+		position: relative;
+        background-color: $bg-button; color: #fff;
+		box-shadow: 0 4px darken($bg-button, 30%);
+		will-change: transform;
+		transform: translateY(0);
+		transition: all 0.3s;
+		&:hover {
+			transform: translateY(2px);
+			box-shadow: 0 3px darken($bg-button, 30%);
+		}
+		&:active {
+			transform: translateY(4px);
+			box-shadow: 0 0 darken($bg-button, 30%);
+		}
 
       &:hover { background-color: darken($bg-button, 10%); }
       &:active { background-color: $bg-button; }
@@ -121,13 +137,21 @@ button, .button {
       &.button_disabled, &:disabled, &[disabled] { background-color: shade($bg-button, 30%); color: shade(#fff, 30%); }
     }
 
+	&_search {
+		background-color: rgba(0,0,0,0);
+		min-width: em(30px);
+		svg {
+			fill: $color-text-light;
+		}
+	}
+
     &_file {
       overflow: hidden;
 
       input[type=file] {
         @include opacity(0);
         display: block;
-        background: white;
+        background: #fff;
         position: absolute; top: 0; right: 0;
         min-width: 100%; min-height: 100%;
         font-size: rem(100px);
@@ -143,9 +167,42 @@ button, .button {
 
 // Main
 .all {
-  &__header {}
-  &__body {}
-  &__footer {}
+
+	&__header {
+		@import "partials/header";
+	}
+
+	&__body {
+		@import "partials/hero";
+		@import "partials/services";
+		@import "partials/ideas";
+		@import "partials/purchase";
+		@import "partials/projects";
+		@import "partials/presentation";
+		@import "partials/mobile";
+		@import "partials/info";
+  	}
+	&__footer {
+
+	}
+}
+
+.p0 {
+	padding: 0;
+}
+
+.section-title {
+	font-weight: 600;
+	font-size: $font-size-default * 2;
+	font-family: $font-default-title;
+	color: $color-text-dark;
+}
+
+.section-caption {
+	font-weight: 600;
+	font-size: $font-size-default * 1.5;
+	font-family: $font-default-title;
+	color: $color-text-dark;
 }
 
 form, .form-styling {
@@ -169,12 +226,12 @@ form, .form-styling {
     box-sizing: border-box;
     border-radius: em(5px);
     // border: solid 1px $color-border;
-    width: 100%; min-width: 260px; height: em(40px, $font-size);
+    width: 100%; min-width: 100px; height: em(40px, $font-size);
     @include padding(em(10px, $font-size) em(16px, $font-size) em(10px, $font-size) em(16px, $font-size));
     background: #fff;
     font-family: $font-default;
     font-size: rem($font-size); line-height: em(20px, $font-size);
-    color: $color-text;
+    color: $color-text-default;
     vertical-align: middle;
 
     &:focus, &:active {}
@@ -186,4 +243,12 @@ form, .form-styling {
   // end form, .form-styling
 }
 
-@import "media";
+
+//@import "partials/header";
+//@import "partials/logo";
+//@import "partials/menu-btn";
+//@import "partials/hero";
+//@import "partials/services";
+//@import "partials/ideas";
+//@import "partials/purchase";
+//@import "partials/projects";

@@ -1,0 +1,30 @@
+header.navbar.navbar-default.navbar-fixed-top.header
+	.container
+		.row
+			.navbar-header
+				a.navbar-brand.logo(href="/") Waxom
+					img.logo__img(src="img/logo/logo.png", alt="logo")
+				button.navbar-toggle.collapsed.menu-btn(type="button", data-toggle="collapse", data-target="#navbar" aria-expanded="false")
+					span.menu-btn__barholder
+
+			.collapse.navbar-collapse.col-md-8.col-md-offset-1#navbar
+				nav
+					ul.nav.navbar-nav.main-nav
+						li.active.main-nav__item: a.main-nav__link(href="#") Home
+						li.main-nav__item: a.main-nav__link(href="#") About Us
+						li.main-nav__item: a.main-nav__link(href="#") Portfolio
+						li.main-nav__item: a.main-nav__link(href="#") Features
+						li.main-nav__item: a.main-nav__link(href="#") Blog
+						li.main-nav__item: a.main-nav__link(href="#") Pricing
+						li.main-nav__item: a.main-nav__link(href="#") Shortcodes
+						li.main-nav__item: a.main-nav__link(href="#") Contact
+
+			.header__search.col-md-1.col-md-offset-1
+				button.button.button_search(type="button")
+					svg(width="16", height="16")
+						use(xlink:href="#search")
+
+				//-form.navbar-form.navbar-right.search(action="#", method="POST")
+				//-	.form-group
+				//-		input.form-control.search__input(type="text", placeholder="Search", required, aria-required="true")
+				//-	input.btn.btn-default.search__submit(type="submit", value="Submit")
